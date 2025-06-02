@@ -1,3 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src:
+    url("./assets/fonts/static/Inconsolata-Regular.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src:
+    url("./assets/fonts/static/Inconsolata-Medium.ttf") format("ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src:
+    url("./assets/fonts/static/Inconsolata-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src:
+    url("./assets/fonts/static/Inconsolata-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
+}
+
+body {
+  color: white;
+  background-image: url("./assets/images/background-mobile.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  font-family: "Inconsolata", monospace;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-image: url("./assets/images/pattern-lines.svg");
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px dashed gray;
+  border-radius: 5%;
+}
+
+.upload-icon {
+  width: 40px;
+  border: 1px solid gray;
+  border-radius: 15%;
+  background-color: gray;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
