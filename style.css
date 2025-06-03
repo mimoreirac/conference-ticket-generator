@@ -97,6 +97,7 @@ body::before {
   width: 90%;
   max-width: 768px;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 header {
@@ -227,20 +228,87 @@ form label {
   max-width: 640px;
   margin: 0 auto;
   text-align: center;
+  flex-grow: 1;
 }
 
 .ticket {
   background-image: url("./assets/images/pattern-ticket.svg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: hsl(245, 19%, 35%, 0.5);
-  width: 90%;
+  width: 100%;
   max-width: 480px;
   margin: 0 auto;
 }
 
 .ticket-avatar {
   width: 50px;
-  border: 1px solid var(--neutral-500);
+  height: 50px;
   border-radius: 10px;
+  margin: 10px;
+}
+
+.ticket-coding-conf {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
+
+.ticket-pattern-circle {
+  padding: 10px;
+}
+
+.ticket-user-info {
+  display: flex;
+  margin: 10px;
+}
+
+.ticket-user-accounts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.github-container {
+  display: flex;
+  align-items: center;
+}
+
+.github-icon {
+  margin-right: 10px;
+}
+
+.ticket-header {
+  font-size: 26px;
+}
+
+.date-location {
+  font-size: 18px;
+  color: var(--neutral-500);
+  margin-top: -20px;
+  margin-left: -30px;
+}
+
+.messages-container {
+  margin: 2rem auto;
+}
+
+#emailMessage {
+  margin-top: 1rem;
+  font-size: 20px;
+  color: var(--neutral-500);
+}
+
+#userName {
+  background: linear-gradient(90deg, var(--gradient-orange), var(--gradient-white) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+#userEmail {
+  color: var(--orange-500);
 }
