@@ -124,6 +124,8 @@ header {
 form {
   display: flex;
   flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 form h2 {
@@ -205,6 +207,7 @@ form label {
   font-weight: 800;
   border: 1px solid var(--neutral-700);
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .attribution {
@@ -215,4 +218,29 @@ form label {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.success-ticket {
+  display: none;
+  flex-direction: column;
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ticket {
+  background-image: url("./assets/images/pattern-ticket.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: hsl(245, 19%, 35%, 0.5);
+  width: 90%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.ticket-avatar {
+  width: 50px;
+  border: 1px solid var(--neutral-500);
+  border-radius: 10px;
 }
