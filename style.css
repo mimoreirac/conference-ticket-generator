@@ -1,3 +1,16 @@
+:root {
+  --neutral-0: hsl(0, 0%, 100%);
+  --neutral-300: hsl(252, 6%, 83%);
+  --neutral-500: hsl(245, 15%, 58%);
+  --neutral-700: hsl(245, 19%, 35%);
+  --neutral-900: hsl(248, 70%, 10%);
+  --orange-500: hsl(7, 88%, 67%);
+  --orange-700: hsl(7, 71%, 60%);
+  --gradient-orange: hsl(7, 86%, 67%);
+  --gradient-white: hsl(0, 0%, 100%);
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,7 +46,7 @@
 }
 
 body {
-  color: white;
+  color: var(--neutral-0);
   background-image: url("./assets/images/background-mobile.png");
   background-size: cover;
   background-position: center;
@@ -50,14 +63,59 @@ body::before {
   background-size: cover;
 }
 
+.squiggly-line-bottom {
+  position: relative;
+  min-height: 100dvh;
+}
+
+.squiggly-line-bottom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-image: url("./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg");
+  background-position: left bottom;
+  background-size: min(70%, 1000px);
+}
+
+.squiggly-line-top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-image: url("./assets/images/pattern-squiggly-line-top.svg");
+  background-position: right top;
+  background-size: min(30%, 500px);
+
+}
+
 .container {
   display: flex;
   flex-direction: column;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  height: 30px;
+}
+
 .content {
   display: flex;
   flex-direction: column;
+  margin: 1rem;
+  flex-grow: 1;
+}
+
+.content-header {
+  font-size: 26px;
+  text-align: center;
 }
 
 form {
@@ -65,26 +123,92 @@ form {
   flex-direction: column;
 }
 
+form h2 {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: var(--neutral-500);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+form label {
+  font-size: 20px;
+  color: var(--neutral-300);
+  margin-top: 10px;
+}
+
 .file-upload {
+  background-color: hsl(245, 19%, 35%, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
   padding: 20px;
-  border: 1px dashed gray;
-  border-radius: 5%;
+  border: 1px dashed var(--neutral-500);
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .upload-icon {
-  width: 40px;
-  border: 1px solid gray;
-  border-radius: 15%;
-  background-color: gray;
+  background-color: hsl(245, 19%, 35%, 0.5);
+  width: 50px;
+  border: 1px solid var(--neutral-700);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.file-input-hidden {
+  display: none;
+}
+
+.upload-text {
+  font-size: 18px;
+  color: var(--neutral-500);
+  text-align: center;
+}
+
+.upload-help-text {
+  display: flex;
+  font-size: 10px;
+  color: var(--neutral-500);
+  margin: 5px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.info-icon {
+  padding-right: 5px;
+}
+
+.input-box {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background-color: hsl(245, 19%, 35%, 0.3);
+  padding: 0.8rem;
+  border: 1px solid var(--neutral-500);
+  border-radius: 15px;
+  color: var(--neutral-300);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.submit-button {
+  margin-top: 15px;
+  background-color: var(--orange-700);
+  padding: 0.8rem;
+  font-family: inherit;
+  font-weight: 800;
+  border: 1px solid var(--neutral-700);
+  border-radius: 15px;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  height: 20px;
+  flex-shrink: 0;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
